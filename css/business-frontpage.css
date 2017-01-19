@@ -1,0 +1,64 @@
+/*!
+ * Start Bootstrap - Business Frontpage HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+body {
+    padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+/* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
+
+.business-header {
+    height: 400px;
+    background: url('../img/loans-for-medical-healthcare-professionals.gif') center center no-repeat scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+/* added this new style for the links to space each other apart within the footer. */
+.lbl-footer{
+    margin-left: 15px;
+   margin-right: 10px;
+}
+/* added this new style for the main page so that it makes the content pop out more. */
+.box-shadow{
+    box-shadow: 1px 7px 15px  #888888;
+}
+/* Customize the text color and shadow color and to optimize text legibility. */
+
+.tagline {
+    text-shadow: 0 0 10px #000;
+    color: #fff;
+}
+
+.img-center {
+    margin: 0 auto;
+}
+/*added this style to help the pictures for each doctor in the DocsBio page and the one from the contact us page so that the images will adjust based on the screen size(good for mobile friendly scenerios).*/
+.img {
+  max-width: 100%
+}
+
+/*word-wrap:break-word
+{
+    word-wrap:break-word;
+}*/
+
+footer {
+    background-color:Black;
+    font-size:medium;
+    color: #808080;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    /*height: 100%;
+    
+    
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    left: 0pt;*/
+    bottom: 0pt;
+    
+}

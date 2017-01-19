@@ -1,0 +1,160 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageEmp.master.cs" Inherits="MasterPageEmp" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Custom CSS -->
+    <link href="css/business-frontpage.css" rel="stylesheet" />
+
+    <title>APERS</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../Default.aspx">APERS</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="../APERS/frmAbout.aspx" role="button" aria-expanded="false">About Us
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="frmMission.aspx">Our Mission</a>
+                            </li>                        
+                            <li>
+                                <a href="frmDocsBio.aspx">Our Docs Bio</a>
+                            </li> 
+                             <li>
+                                <a href="frmFAQ.aspx">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="frmClinicPolicies.aspx"">Clinic Policies</a>
+                            </li>  
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="../APERS/frmContact.aspx" role="button" ari-expanded="false">Contact
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="frmMap.aspx">Map & Direction</a>
+                            </li>  
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="../APERS/frmServices.aspx" role="button" aria-expanded="false">Services<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="frmForms.aspx">Forms & Documents</a>
+                            </li>
+                            <!--<li>
+                                <a href="frmSpecialist.aspx">Our Specialist</a>
+                            </li>-->
+                            <li>
+                                <asp:HyperLink ID="hyplAppointment" runat="server" NavigateUrl="~/frmAppointments.aspx" Visible="False">Appointment</asp:HyperLink>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <!--<li>
+                         <asp:HyperLink ID="hyplMyAccount" runat="server" NavigateUrl="~/frmMyAccount.aspx"><span class="glyphicon glyphicon-user"></span>&nbsp;My Account</asp:HyperLink>
+                     </li>-->
+                    <li>
+                         <asp:HyperLink ID="hyplLogout" runat="server" NavigateUrl="~/frmLogin.aspx"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Logout</asp:HyperLink>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Image Background Page Header -->
+    <!-- Note: The background image is set within the business-frontpage.css file. -->
+    <header class="business-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!--<h1 class="tagline">Header title</h1>-->
+                </div>
+            </div>
+        </div>
+    </header>
+           
+           <!-- Start Container for extra Nav -->
+    <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>             -->   
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            
+            <div class="navbar navbar-inverse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="../APERS/frmManagePatients.aspx">Manage Patients</a>
+                    </li>
+                    <li>
+                        <a href="../APERS/frmManageMedicine.aspx">Manage Medicine</a>
+                    </li>
+                    <li>
+                        <a href="../APERS/frmManageTreament.aspx">Manage Treatment</a>
+                    </li>
+                    <li>
+                        <asp:HyperLink ID="hyplManageClinic" runat="server" NavigateUrl="~/frmManageClinic.aspx" Visible="False">Manage Clinic</asp:HyperLink>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        
+        <!-- /.container --> 
+
+    <div class="container">
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <footer>
+    Site Information:<asp:HyperLink ID="TermConditionID" runat="server" 
+        CssClass="lbl-footer" NavigateUrl="~/frmTAC.aspx">Terms and Conditions</asp:HyperLink> | <asp:HyperLink ID="PrivacyPolicyID" runat="server" CssClass="lbl-footer" NavigateUrl="~/frmClinicPolicies.aspx">Clinic Policy</asp:HyperLink> | <asp:HyperLink ID="NPPID" runat="server" CssClass="lbl-footer" NavigateUrl="~/frmFAQ.aspx">FAQ's</asp:HyperLink> | <asp:HyperLink ID="HyperLink1" runat="server" CssClass="lbl-footer" NavigateUrl="~/frmContact.aspx">Send us feedback</asp:HyperLink><br />
+    © 2004-2015 APERS Medical Clinic. All rights reserved.  
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/bs.min.js"></script>
+    <script src="js/ei10viewportbug.js"></script>
+</body>
+</html>
